@@ -22,6 +22,26 @@ button {
   cursor: pointer;
 }
 
+/* Layout */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 16px;
+}
+
+/* Board */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+}
+
 /* Card */
 
 .card {
