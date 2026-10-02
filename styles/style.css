@@ -21,3 +21,77 @@ button {
   font: inherit;
   cursor: pointer;
 }
+
+/* Card */
+
+.card {
+  position: relative;
+  aspect-ratio: 1;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #e0cfb5;
+  border-radius: 12px;
+  background: none;
+  transition: transform 0.15s ease, border-color 0.3s ease;
+}
+
+.card:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.card:focus-visible {
+  outline: 3px solid #d98b3a;
+  outline-offset: 2px;
+}
+
+.card:disabled {
+  cursor: default;
+}
+
+.card__back,
+.card__front {
+  position: absolute;
+  inset: 0;
+}
+
+.card__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(45deg, #f2c48d, #f2c48d 10px, #eeb877 10px, #eeb877 20px);
+}
+
+.card__back::after {
+  content: '🐾';
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+.card__front {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card.is-open .card__front {
+  opacity: 1;
+}
+
+.card.is-matched {
+  border-color: #6bb36b;
+}
+
+.card__image {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__name {
+  padding: 4px;
+  font-size: clamp(0.6rem, 2.2vw, 0.85rem);
+  line-height: 1.2;
+  text-align: center;
+}
