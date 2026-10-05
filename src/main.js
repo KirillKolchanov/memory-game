@@ -3,14 +3,19 @@ import { CARDS } from './data/cards.js';
 import { createGame } from './game/game.js';
 import { createBoard } from './components/board.js';
 import { createHeader } from './components/header.js';
+import { showLeaderboardModal } from './components/leaderboardModal.js';
 import { createModal } from './components/modal.js';
 import { createStats } from './components/stats.js';
 import { showWinModal } from './components/winModal.js';
-import { saveResult } from './storage/leaderboard.js';
+import { getResults, saveResult } from './storage/leaderboard.js';
 import { createElement } from './utils/createElement.js';
 
 // Arrow wrappers defer access to `game`, which is declared below
-const header = createHeader({ onNewGame: () => game.start() });
+const header = createHeader({
+  onNewGame: () => game.start(),
+  // Read storage on every open, so the table always shows fresh results
+  onShowLeaderboard: () => showLeaderboardModal(modal, getResults()),
+});
 const board = createBoard({ onCardClick: (uid) => game.handleCardClick(uid) });
 const stats = createStats();
 const modal = createModal();

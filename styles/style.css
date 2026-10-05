@@ -122,6 +122,29 @@ button {
   font-size: 1.125rem;
 }
 
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ecdcc4;
+}
+
+.leaderboard th {
+  font-weight: 600;
+  color: #7a6a55;
+}
+
+.leaderboard__empty {
+  margin: 0;
+  color: #7a6a55;
+}
+
 .modal__actions {
   display: flex;
   flex-wrap: wrap;
