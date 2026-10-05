@@ -1,7 +1,7 @@
 import { createElement } from '../utils/createElement.js';
 import { formatDate } from '../utils/formatDate.js';
 
-const COLUMNS = ['Место', 'Ходы', 'Дата'];
+const COLUMNS = ['Rank', 'Moves', 'Date'];
 
 function createTable(results) {
   const head = createElement(
@@ -31,7 +31,7 @@ export function showLeaderboardModal(modal, results) {
   const content =
     results.length > 0
       ? createTable(results)
-      : createElement('p', { className: 'leaderboard__empty', text: 'Пока нет результатов' });
+      : createElement('p', { className: 'leaderboard__empty', text: 'No results yet' });
 
-  modal.open({ title: 'Таблица лидеров', content });
+  modal.open({ title: 'Leaderboard', content });
 }

@@ -1,6 +1,6 @@
 import { createElement } from '../utils/createElement.js';
 
-const CLOSED_CARD_LABEL = 'Закрытая карточка';
+const CLOSED_CARD_LABEL = 'Closed card';
 
 /**
  * Syncs card element classes and accessible name with card state.

@@ -13,7 +13,7 @@ export function createModal() {
 
   const closeButton = createElement('button', {
     className: 'btn btn--secondary',
-    text: 'Закрыть',
+    text: 'Close',
     attrs: { type: 'button' },
     events: { click: () => close() },
   });

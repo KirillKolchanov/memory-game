@@ -20,8 +20,8 @@ export function createHeader({ onNewGame, onShowLeaderboard }) {
     createElement(
       'div',
       { className: 'header__actions' },
-      createHeaderButton('Новая игра', onNewGame),
-      createHeaderButton('Таблица лидеров', onShowLeaderboard),
+      createHeaderButton('New game', onNewGame),
+      createHeaderButton('Leaderboard', onShowLeaderboard),
     ),
   );
 }

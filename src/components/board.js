@@ -5,7 +5,7 @@ import { createCard, updateCard } from './card.js';
  * Creates the game board. Reports clicked card uid via onCardClick and knows nothing about game rules.
  */
 export function createBoard({ onCardClick }) {
-  const element = createElement('section', { className: 'board', attrs: { 'aria-label': 'Игровое поле' } });
+  const element = createElement('section', { className: 'board', attrs: { 'aria-label': 'Game board' } });
   const cardElements = new Map();
 
   // One delegated listener for all cards: survives re-renders on a new game

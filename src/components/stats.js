@@ -10,13 +10,13 @@ export function createStats() {
   const element = createElement(
     'div',
     { className: 'stats', attrs: { 'aria-live': 'polite' } },
-    createElement('p', { className: 'stats__item', text: 'Ходы: ' }, movesValue),
-    createElement('p', { className: 'stats__item', text: 'Пары: ' }, pairsValue),
+    createElement('p', { className: 'stats__item', text: 'Moves: ' }, movesValue),
+    createElement('p', { className: 'stats__item', text: 'Pairs: ' }, pairsValue),
   );
 
   function update({ moves, matchedPairs, totalPairs }) {
     movesValue.textContent = moves;
-    pairsValue.textContent = `${matchedPairs} из ${totalPairs}`;
+    pairsValue.textContent = `${matchedPairs} of ${totalPairs}`;
   }
 
   return { element, update };
