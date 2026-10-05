@@ -6,6 +6,7 @@ import { createHeader } from './components/header.js';
 import { createModal } from './components/modal.js';
 import { createStats } from './components/stats.js';
 import { showWinModal } from './components/winModal.js';
+import { saveResult } from './storage/leaderboard.js';
 import { createElement } from './utils/createElement.js';
 
 // Arrow wrappers defer access to `game`, which is declared below
@@ -19,7 +20,11 @@ const game = createGame({
   onRender: board.render,
   onCardUpdate: board.updateCard,
   onStatsUpdate: stats.update,
-  onWin: (moves) => showWinModal(modal, { moves, onNewGame: () => game.start() }),
+  // Called once per finished game, so the result is saved exactly once
+  onWin: (moves) => {
+    saveResult(moves);
+    showWinModal(modal, { moves, onNewGame: () => game.start() });
+  },
 });
 
 const app = createElement('main', { className: 'app' }, stats.element, board.element);
