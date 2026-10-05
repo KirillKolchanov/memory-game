@@ -38,9 +38,12 @@ export function createModal() {
     }
   });
 
-  // Button, backdrop and Escape all end up here, so cleanup lives in one place
+  // Escape closes the dialog natively, bypassing close(), so unlock scroll on the event too.
+  // The event is async: skip cleanup if the modal was reopened before it fired.
   dialog.addEventListener('close', () => {
-    document.body.classList.remove(SCROLL_LOCK_CLASS);
+    if (!dialog.open) {
+      document.body.classList.remove(SCROLL_LOCK_CLASS);
+    }
   });
 
   function open({ title: titleText, content, actions: extraActions = [] }) {
@@ -57,6 +60,7 @@ export function createModal() {
 
   function close() {
     dialog.close();
+    document.body.classList.remove(SCROLL_LOCK_CLASS);
   }
 
   return { element: dialog, open, close };
