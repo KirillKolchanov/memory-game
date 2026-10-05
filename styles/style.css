@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* Keeps layout from jumping when a modal hides the scrollbar */
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -69,6 +74,54 @@ button {
 .btn:disabled {
   cursor: default;
   opacity: 0.5;
+}
+
+.btn--secondary {
+  color: #2b2b2b;
+  background-color: #f2e3cc;
+}
+
+.btn--secondary:hover {
+  background-color: #e8d2b0;
+}
+
+/* Modal */
+
+.is-scroll-locked {
+  overflow: hidden;
+}
+
+.modal {
+  width: min(420px, 100% - 32px);
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  color: inherit;
+  background-color: #fffaf3;
+  box-shadow: 0 16px 40px rgb(0 0 0 / 25%);
+}
+
+.modal::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 /* Layout */
