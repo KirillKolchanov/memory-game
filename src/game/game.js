@@ -13,9 +13,14 @@ export function createGame({ cards, onRender, onCardUpdate, onStatsUpdate, onWin
   }
 
   function start() {
+    // Cancel pending close of the previous game's pair, otherwise it would hit the new board (same uids)
+    clearTimeout(state?.timerId);
+
     state = {
       deck: createDeck(cards),
       firstCard: null,
+      isLocked: false,
+      timerId: null,
       moves: 0,
       matchedPairs: 0,
       isFinished: false,
@@ -39,7 +44,7 @@ export function createGame({ cards, onRender, onCardUpdate, onStatsUpdate, onWin
 
   function handleCardClick(uid) {
     // Ignore clicks that must not change the game
-    if (state.isFinished) return;
+    if (state.isFinished || state.isLocked) return;
 
     const card = state.deck.find((item) => item.uid === uid);
     if (!card || card.isOpen || card.isMatched) return;
@@ -72,8 +77,15 @@ export function createGame({ cards, onRender, onCardUpdate, onStatsUpdate, onWin
       return;
     }
 
+    // Mismatch: block other cards until both are closed
+    state.isLocked = true;
     onStatsUpdate(getStats());
-    setTimeout(() => closeCards(firstCard, card), MISMATCH_DELAY);
+
+    state.timerId = setTimeout(() => {
+      closeCards(firstCard, card);
+      state.isLocked = false;
+      state.timerId = null;
+    }, MISMATCH_DELAY);
   }
 
   return { start, handleCardClick };
