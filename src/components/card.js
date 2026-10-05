@@ -29,7 +29,6 @@ export function createCard(card) {
       'span',
       { className: 'card__front' },
       createElement('img', { className: 'card__image', attrs: { src: card.image, alt: '' } }),
-      createElement('span', { className: 'card__name', text: card.name }),
     ),
   );
 

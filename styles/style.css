@@ -105,18 +105,3 @@ button {
   height: 100%;
   object-fit: cover;
 }
-
-/* Caption overlays the photo so long breed names don't shrink the image */
-.card__name {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 3px 4px;
-  font-size: clamp(0.55rem, 2vw, 0.8rem);
-  line-height: 1.15;
-  text-align: center;
-  overflow-wrap: anywhere;
-  hyphens: auto;
-  background-color: rgb(255 255 255 / 85%);
-}
