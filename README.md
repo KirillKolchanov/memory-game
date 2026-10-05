@@ -3,17 +3,15 @@ Memory-game
 
 ## Image credits
 
-Dog photos are taken from [Wikimedia Commons](https://commons.wikimedia.org/), cropped, resized and converted to WebP.
+Dog photos are taken from [Unsplash](https://unsplash.com/license) and [Pexels](https://www.pexels.com/license/) (free to use), cropped, resized and converted to WebP.
 
-| Card | Author | License | Source |
-|---|---|---|---|
-| Shiba Inu | Takashiba at English Wikipedia | Public domain | [Taka Shiba.jpg](https://commons.wikimedia.org/wiki/File:Taka_Shiba.jpg) |
-| American Staffordshire Terrier | Svenska Mässan from Sweden | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [AMERICAN STAFFORDSHIRE TERRIER, Zican’s Bz Ez Dragon](https://commons.wikimedia.org/wiki/File:AMERICAN_STAFFORDSHIRE_TERRIER,_Zican%E2%80%99s_Bz_Ez_Dragon_(24208348891).2.jpg) |
-| Pembroke Welsh Corgi | Dog breed facts | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Welsh Pembroke Corgi.jpg](https://commons.wikimedia.org/wiki/File:Welsh_Pembroke_Corgi.jpg) |
-| West Highland White Terrier | Christopher Walker from Krakow, Poland | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [West Highland White Terrier Krakow.jpg](https://commons.wikimedia.org/wiki/File:West_Highland_White_Terrier_Krakow.jpg) |
-| Australian Shepherd | Trickdog-Fina | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Australian Shepherd red bi.JPG](https://commons.wikimedia.org/wiki/File:Australian_Shepherd_red_bi.JPG) |
-| Dachshund | Katemil94 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Dachshund (Short)](https://commons.wikimedia.org/wiki/File:%EB%8B%A5%EC%8A%A4%ED%9B%88%ED%8A%B8(%EB%8B%A8%EB%AA%A8%EC%A2%85)_(Dachshund_(Short)).jpg) |
-| Toy Poodle | RuzeNoob | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [Black toy poodle.jpg](https://commons.wikimedia.org/wiki/File:Black_toy_poodle.jpg) |
-| Golden Retriever | Janneke Vreugdenhil, derivative work: Anka Friedrich | Public domain | [Golden Retriever Dukedestiny01 drvd.jpg](https://commons.wikimedia.org/wiki/File:Golden_Retriever_Dukedestiny01_drvd.jpg) |
-
-Modified images derived from CC BY-SA works are distributed under the same license.
+| Card | Author | Source |
+|---|---|---|
+| Shiba Inu | [Minh Pham](https://unsplash.com/@minhphamdesign) | [Unsplash](https://unsplash.com/photos/orange-dog-RSiqCjdmKPM) |
+| Staffordshire Terrier | Dana Ciurumelea | [Pexels](https://www.pexels.com/photo/close-up-photo-of-a-dog-10979190/) |
+| Corgi | [Joycelyn Hung](https://unsplash.com/@jhungvisuals) | [Unsplash](https://unsplash.com/photos/a-brown-and-white-dog-sitting-on-top-of-a-white-floor-50birCocEv0) |
+| West Highland White Terrier | Luc AVE | [Pexels](https://www.pexels.com/photo/adorable-west-highland-white-terrier-puppy-outdoors-31934792/) |
+| Australian Shepherd | [Holly Spangler](https://unsplash.com/@h_spangler) | [Unsplash](https://unsplash.com/photos/a-dog-lying-in-the-grass-_39Mv1OoSsY) |
+| Dachshund | [Khalid Elkady](https://unsplash.com/@k2kd36) | [Unsplash](https://unsplash.com/photos/a-small-brown-dog-sitting-on-top-of-a-white-floor-VA1JRsFJd70) |
+| Toy Poodle | [Ramiro Pianarosa](https://unsplash.com/@rpianarosa) | [Unsplash](https://unsplash.com/photos/a-small-dog-looking-up-pRhZHhixRIY) |
+| Golden Retriever | [Faber Leonardo](https://unsplash.com/@faberleonardo) | [Unsplash](https://unsplash.com/photos/a-close-up-of-a-dog-with-a-white-background-EVJZJ7_6CLY) |
