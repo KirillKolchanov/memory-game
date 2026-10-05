@@ -6,6 +6,6 @@ export const CARDS = [
   { id: 'westie', name: 'Вест-хайленд-уайт-терьер', image: './assets/images/westie.webp' },
   { id: 'australian-shepherd', name: 'Австралийская овчарка', image: './assets/images/australian-shepherd.webp' },
   { id: 'dachshund', name: 'Такса', image: './assets/images/dachshund.webp' },
-  { id: 'pug', name: 'Мопс', image: './assets/images/pug.webp' },
+  { id: 'toy-poodle', name: 'Той-пудель', image: './assets/images/toy-poodle.webp' },
   { id: 'golden-retriever', name: 'Золотистый ретривер', image: './assets/images/golden-retriever.webp' },
 ];
