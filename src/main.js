@@ -2,20 +2,23 @@
 import { CARDS } from './data/cards.js';
 import { createGame } from './game/game.js';
 import { createBoard } from './components/board.js';
+import { createStats } from './components/stats.js';
 import { createElement } from './utils/createElement.js';
 
+// Arrow wrappers defer access to `game`, which is declared below
 const board = createBoard({ onCardClick: (uid) => game.handleCardClick(uid) });
+const stats = createStats();
 
 const game = createGame({
   cards: CARDS,
   onRender: board.render,
   onCardUpdate: board.updateCard,
-  // Counters and win modal come in the next steps
-  onStatsUpdate: () => {},
+  onStatsUpdate: stats.update,
+  // Win modal comes in the next steps
   onWin: () => {},
 });
 
-const app = createElement('main', { className: 'app' }, board.element);
+const app = createElement('main', { className: 'app' }, stats.element, board.element);
 
 document.body.append(app);
 game.start();

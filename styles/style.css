@@ -32,6 +32,25 @@ button {
   padding: 24px 16px;
 }
 
+/* Stats */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 32px;
+  font-size: 1.125rem;
+}
+
+.stats__item {
+  margin: 0;
+}
+
+.stats__value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Board */
 
 .board {
